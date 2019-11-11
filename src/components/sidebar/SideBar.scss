@@ -1,0 +1,26 @@
+.sidebar {
+
+  .user {
+    margin-left: 30px;
+  }
+
+  .sideitem {
+    display: flex;
+  }
+
+  div.rname {
+    display: inline-flex;
+    span {
+      margin-top: -25px !important;
+    }
+  }
+
+  .ionicon {
+    font-size: 20px;
+  }
+
+  div.sideicon {
+    display: inline;
+    margin: 0 15px;
+  }
+}

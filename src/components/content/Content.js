@@ -1,0 +1,29 @@
+import React from 'react';
+
+import classNames from 'classnames';
+import { Container } from 'reactstrap';
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import NavBar from './Navbar';
+
+export default function Content(props) {
+  const { toggle, isOpen, routes } = props;
+  return (
+    <Container fluid className={classNames('content', { 'is-open': isOpen })}>
+      <NavBar toggle={toggle} />
+      { routes.map(({ path, component }) => (
+        <Route key={path} exact path={path} component={component} />
+      ))}
+    </Container>
+  );
+}
+
+Content.propTypes = {
+  toggle: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  routes: PropTypes.objectOf(PropTypes.array),
+};
+
+Content.defaultProps = {
+  routes: [],
+};

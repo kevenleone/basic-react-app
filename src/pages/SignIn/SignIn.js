@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './index.css';
+import { Input, Label } from 'reactstrap';
+import './SignIn.css';
 
-export default function index() {
+export default function SignIn() {
   return (
     <div id="wrapper">
       <div id="left">
@@ -12,16 +13,16 @@ export default function index() {
           </div>
           <form>
             <div>
-              <label htmlFor="email">
+              <Label htmlFor="email">
                 Email or Username
-                <input id="email" name="email" type="text" className="text-input" />
-              </label>
+                <Input id="email" name="email" type="text" className="text-input" />
+              </Label>
             </div>
             <div>
-              <label htmlFor="password">
+              <Label htmlFor="password">
                 Password
-                <input id="password" name="password" type="password" className="text-input" />
-              </label>
+                <Input id="password" name="password" type="password" className="text-input" />
+              </Label>
             </div>
             <button type="button" className="primary-btn">
               Sign In

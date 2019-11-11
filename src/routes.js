@@ -1,11 +1,13 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Login from './pages/Login';
+import SignIn from './pages/SignIn';
+import Admin from './admin';
 
 const Routes = () => (
   <HashRouter>
     <Switch>
-      <Route component={Login} path="/" exact />
+      <Route component={SignIn} path="/login" exact />
+      <Admin />
     </Switch>
   </HashRouter>
 );
