@@ -3,7 +3,7 @@ import SideBar from './components/sidebar/SideBar';
 import Content from './components/content/Content';
 import Dashboard from './pages/Dashboard';
 import Clients from './pages/Clients';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const routes = [

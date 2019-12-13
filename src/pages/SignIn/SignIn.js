@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Input, Label } from 'reactstrap';
+import { Input, FormLabel } from '@chakra-ui/core';
 import './SignIn.css';
 
 export default function SignIn() {
@@ -13,16 +13,16 @@ export default function SignIn() {
           </div>
           <form>
             <div>
-              <Label htmlFor="email">
+              <FormLabel htmlFor="email">
                 Email or Username
                 <Input id="email" name="email" type="text" className="text-input" />
-              </Label>
+              </FormLabel>
             </div>
             <div>
-              <Label htmlFor="password">
+              <FormLabel htmlFor="password">
                 Password
                 <Input id="password" name="password" type="password" className="text-input" />
-              </Label>
+              </FormLabel>
             </div>
             <button type="button" className="primary-btn">
               Sign In

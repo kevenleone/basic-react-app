@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavItem, NavLink, Nav } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { List, ListItem, ListIcon } from '@chakra-ui/core';
+
 import './SideBar.scss';
 
 const SideBar = ({ isOpen, routes }) => (
@@ -11,21 +12,20 @@ const SideBar = ({ isOpen, routes }) => (
       <h3>Your App Name</h3>
     </div>
     <div className="side-menu">
-      <Nav vertical className="list-unstyled pb-3">
+      <nav vertical className="list-unstyled pb-3">
         <p className="user">Welcome, User</p>
-        { routes.map(({ path, name, icon }) => (
-          <NavItem key={name}>
-            <NavLink tag={Link} to={path}>
-              <div className="ionicon sideicon">
-                <i className={icon} />
-              </div>
-              <div className="rname">
-                <span>{name}</span>
-              </div>
-            </NavLink>
-          </NavItem>
-        ))}
-      </Nav>
+        <List spacing={3} marginLeft={5} marginTop={5}>
+          { routes.map(({ path, name }) => (
+            <ListItem>
+              <ListIcon icon="at-sign" color="green.500" />
+              <Link to={path}>
+                {name}
+              </Link>
+            </ListItem>
+          ))}
+        </List>
+
+      </nav>
     </div>
   </div>
 );
